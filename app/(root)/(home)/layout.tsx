@@ -8,7 +8,7 @@ const HomeLayout = ({ children }: { children: ReactNode }) => {
       <Navbar />
       <div className="mt-[72px]">
         <Sidebar />
-        <div className="flex ml-[264px] p-8">{children}</div>
+        <div className="p-4 sm:ml-[70px] sm:p-8 xl:ml-[264px]">{children}</div>
       </div>
     </div>
   );

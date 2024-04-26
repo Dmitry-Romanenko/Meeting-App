@@ -25,7 +25,15 @@ const config = {
         },
         blue: {
           1: '#0E78F9',
+          2: '#ECF0FF',
+          3: '#C9DDFF',
         },
+      },
+      gridTemplateColumns: {
+        'home-cards': 'repeat(auto-fit, minmax(auto, 260px))',
+      },
+      gridTemplateRows: {
+        'home-cards': '260px',
       },
       keyframes: {
         'accordion-down': {

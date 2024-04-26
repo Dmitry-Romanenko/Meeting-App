@@ -3,14 +3,20 @@
 import { useState } from 'react';
 import Logo from './Logo';
 import MobileMenu from './MobileMenu';
+import { SignedIn, UserButton } from '@clerk/nextjs';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 w-[100%] h-[72px] bg-dark-1 z-20 flex justify-between items-center px-6">
+    <div className="fixed left-0 top-0 z-20 flex h-[72px] w-[100%] items-center justify-between bg-dark-1 px-6">
       <Logo />
-      <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <div className="flex items-center gap-5">
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
+        <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      </div>
     </div>
   );
 };

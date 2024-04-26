@@ -1,3 +1,12 @@
+import HomeCards from '@/components/HomeCards';
+import HomeWidget from '@/components/HomeWidget';
+import Modal from '@/components/Modal';
+
 export default function Home() {
-  return <h1 className="text-white font-bold text-3xl">Home</h1>;
+  return (
+    <section>
+      <HomeWidget />
+      <HomeCards />
+    </section>
+  );
 }
